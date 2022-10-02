@@ -2,19 +2,19 @@
   <main>
     <form @submit.prevent>
       <p-form-field
-        type="text"
         id="title"
+        type="text"
         label="Title"
-        v-model:value="title" />
+        v-model:value="news.title" />
 
       <p-form-field
-        type="text"
         id="author"
+        type="text"
         label="Author"
-        v-model:value="author" />
+        v-model:value="news.author" />
 
       <p-label label-for="body">Body</p-label>
-      <p-text-area id="body" v-model:value="body"></p-text-area>
+      <p-text-area id="body" v-model:value="news.body"></p-text-area>
 
       <div class="d-grid mt-5">
         <p-button @click="handleSubmit">Submit post</p-button>
@@ -31,12 +31,25 @@ import PTextArea from "atoms/PTextArea.vue";
 
 export default {
   name: "PForm",
+  emits: ["submit-news"],
   data() {
     return {
-      title: "s",
-      author: "George R.R Martin",
-      body: "Twas a cold and stormy night",
+      news: {
+        title: "",
+        author: "",
+        body: "",
+      },
     };
+  },
+  props: {
+    newsData: {
+      type: Object,
+      default: () => ({
+        title: "",
+        author: "",
+        body: "",
+      }),
+    },
   },
   components: {
     PFormField,
@@ -46,8 +59,11 @@ export default {
   },
   methods: {
     handleSubmit() {
-      console.log(this.title, this.author, this.body);
+      this.$emit("submit-news", this.news);
     },
+  },
+  mounted() {
+    this.news = { ...this.newsData };
   },
 };
 </script>

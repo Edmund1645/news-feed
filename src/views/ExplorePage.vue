@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div>
+    <h1>Explore the news</h1>
+  </div>
 </template>
 
 <script>
