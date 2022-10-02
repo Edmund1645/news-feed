@@ -1,13 +1,13 @@
 <template>
-  <p-news-item />
+  <p-form />
 </template>
 
 <script>
-import PNewsItem from "molecules/PNewsItem.vue";
+import PForm from "organisms/PForm.vue";
 export default {
-  name: "HomePage",
+  name: "NewPost",
   components: {
-    PNewsItem,
+    PForm,
   },
 };
 </script>

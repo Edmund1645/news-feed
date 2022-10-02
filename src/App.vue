@@ -1,7 +1,18 @@
 <template>
-  <router-view />
+  <p-nav />
+  <div class="container-p py-5">
+    <router-view />
+  </div>
 </template>
 
-<script></script>
+<script>
+import PNav from "@/components/organisms/PNav.vue";
+export default {
+  name: "App",
+  components: {
+    PNav,
+  },
+};
+</script>
 
 <style scoped></style>

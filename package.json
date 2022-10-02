@@ -12,6 +12,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "bootstrap": "^5.2.1",
     "vue": "^3.2.38",
     "vue-router": "^4.1.5"
   },
@@ -24,6 +25,7 @@
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-vue": "^9.3.0",
     "prettier": "^2.7.1",
+    "sass": "^1.55.0",
     "start-server-and-test": "^1.14.0",
     "vite": "^3.0.9"
   }

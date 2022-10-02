@@ -1,0 +1,28 @@
+@import "~bootstrap/scss/functions";
+
+$body-bg: #212529;
+$body-color: #f8f9fa;
+$primary: #fd7e14;
+$input-bg: #343a40;
+$input-border-color: #6c757d;
+
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";
+
+@mixin make-container($padding-x: $container-padding-x) {
+  width: 100%;
+  padding-right: $padding-x;
+  padding-left: $padding-x;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 760px;
+}
+
+.container-p {
+  @include make-container();
+}
+
+@import "~bootstrap/scss/root";
+
+@import "~bootstrap/scss/bootstrap";

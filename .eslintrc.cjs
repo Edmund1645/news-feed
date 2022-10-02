@@ -20,6 +20,9 @@ module.exports = {
   parserOptions: {
     ecmaVersion: "latest",
   },
+  rules: {
+    "prettier/prettier": ["warn", { bracketSameLine: true }],
+  },
   env: {
     "cypress/globals": true,
   },
