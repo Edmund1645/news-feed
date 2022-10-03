@@ -1,13 +1,9 @@
-const { defineConfig } = require("cypress");
-const baseUrl =
-  process.env.NODE_ENV === "development"
-    ? "http://localhost:5173"
-    : "http://localhost:4173";
+import { defineConfig } from "cypress";
 
-module.exports = defineConfig({
+export default defineConfig({
   e2e: {
     specPattern: "cypress/e2e/**/*.{cy,spec}.{js,jsx,ts,tsx}",
-    baseUrl: baseUrl,
+    baseUrl: "http://localhost:4173",
   },
   component: {
     specPattern: "cypress/component/**/*.{cy,spec}.{js,ts,jsx,tsx}",

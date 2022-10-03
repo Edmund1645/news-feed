@@ -1,15 +1,24 @@
 <template>
   <div class="mb-4 row">
     <div class="col-12 col-md-6 mb-3 mb-md-0">
-      <p-input v-model:value="search.term" placeholder="Search..."></p-input>
+      <p-input
+        v-model:value="search.term"
+        placeholder="Search..."
+        data-cy="search-input">
+      </p-input>
     </div>
 
     <div class="col-6 col-md-3 dropdown-center">
-      <p-button class="btn-secondary dropdown-toggle" data-bs-toggle="dropdown">
+      <p-button
+        class="btn-secondary dropdown-toggle"
+        data-bs-toggle="dropdown"
+        data-cy="search-key-dropdown">
         Search by...
       </p-button>
 
-      <div class="dropdown-menu dropdown-menu-dark">
+      <div
+        class="dropdown-menu dropdown-menu-dark"
+        data-cy="search-key-dropdown-menu">
         <form @submit.prevent class="px-3">
           <div class="form-check">
             <p-radio
@@ -48,11 +57,16 @@
     </div>
 
     <div class="col-6 col-md-3 dropdown-center">
-      <p-button class="btn-secondary dropdown-toggle" data-bs-toggle="dropdown">
+      <p-button
+        class="btn-secondary dropdown-toggle"
+        data-bs-toggle="dropdown"
+        data-cy="sort-dropdown">
         Sort by...
       </p-button>
 
-      <div class="dropdown-menu dropdown-menu-dark">
+      <div
+        class="dropdown-menu dropdown-menu-dark"
+        data-cy="sort-dropdown-menu">
         <form @submit.prevent class="px-3">
           <div class="form-check">
             <p-radio
