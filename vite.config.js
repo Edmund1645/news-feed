@@ -17,9 +17,11 @@ export default defineConfig({
         new URL("./src/components/organisms", import.meta.url)
       ),
       views: fileURLToPath(new URL("./src/views", import.meta.url)),
+      utils: fileURLToPath(new URL("./src/utils", import.meta.url)),
       "~bootstrap": fileURLToPath(
         new URL("node_modules/bootstrap", import.meta.url)
       ),
+      "mock-data": fileURLToPath(new URL("./mock-data", import.meta.url)),
     },
   },
 });

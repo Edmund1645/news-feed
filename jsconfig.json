@@ -6,6 +6,9 @@
       "atoms/*": ["./src/components/atoms/*"],
       "molecules/*": ["./src/components/molecules/*"],
       "organisms/*": ["./src/components/organisms/*"],
+      "views/*": ["./src/views/*"],
+      "utils/*": ["./src/utils/*"],
+      "mock-data/*": ["./mock-data/*"],
       "~bootstrap/*": ["node_modules/bootstrap"]
     }
   },

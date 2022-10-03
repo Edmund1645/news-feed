@@ -1,15 +1,22 @@
 import { createStore } from "vuex";
 import { v4 as uuidv4 } from "uuid";
 
+import mockNews from "mock-data/news.json";
+
+const defaultState = () => {
+  // figured it'll be more efficient to lookup & update news items by id instead of looping through
+  return { ...mockNews };
+};
+
 const store = createStore({
   state() {
     return {
-      news: {}, // figured it'll be more efficient to lookup news items by id instead of looping through
+      news: defaultState(),
     };
   },
   getters: {
     allNews(state) {
-      return Object.values(state.news);
+      return Object.values(state.news).reverse(); // newest first
     },
     newsItemById(state) {
       return (id) => {

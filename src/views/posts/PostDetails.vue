@@ -23,6 +23,11 @@ export default {
       return this.newsItemById(this.$route.params.id);
     },
   },
+  created() {
+    if (!this.newsItem.title) {
+      this.$router.push("/");
+    }
+  },
 };
 </script>
 
