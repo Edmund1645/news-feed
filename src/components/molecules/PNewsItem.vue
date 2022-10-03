@@ -7,9 +7,9 @@
       {{ news.title }}
     </router-link>
     <p>
-      Author: <strong>{{ news.author }}</strong>
+      Author: <strong data-cy="news-author">{{ news.author }}</strong>
     </p>
-    <p class="mb-0">{{ truncatedBody }}</p>
+    <p class="mb-0" data-cy="news-body">{{ truncatedBody }}</p>
   </article>
 </template>
 
