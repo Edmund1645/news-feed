@@ -1,14 +1,11 @@
-# news-feed
+[![Build and Test](https://github.com/Edmund1645/news-feed/actions/workflows/main.yml/badge.svg)](https://github.com/Edmund1645/news-feed/actions/workflows/main.yml)
+# Posty
+ News feed application built with Vue 3 , Vue router & Vuex
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Features 
+- Search by author, title or body
+- Sort by order
+- Edit a news post
 
 ## Project Setup
 
