@@ -1,7 +1,9 @@
 <template>
-  <h1 class="mb-5">Your news feed</h1>
-  <p-search @update:search="handleSearchUpdate" />
-  <p-news-item v-for="news in newsResult" :key="news.id" :news="news" />
+  <div data-cy="news-feed">
+    <h1 class="mb-5">Your news feed</h1>
+    <p-search @update:search="handleSearchUpdate" />
+    <p-news-item v-for="news in newsResult" :key="news.id" :news="news" />
+  </div>
 </template>
 
 <script>

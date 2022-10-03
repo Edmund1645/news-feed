@@ -19,7 +19,9 @@
           Profile
         </router-link>
       </div>
-      <p-button @click="$router.push('/post/new')">New Post</p-button>
+      <p-button @click="$router.push('/post/new')" data-cy="new-post">
+        New Post
+      </p-button>
     </div>
   </nav>
 </template>

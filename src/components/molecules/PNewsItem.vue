@@ -1,6 +1,9 @@
 <template>
   <article class="mb-5 border border-secondary rounded p-3">
-    <router-link :to="`/post/${news.id}`" class="d-inline-block mb-3">
+    <router-link
+      :to="`/post/${news.id}`"
+      class="d-inline-block mb-3"
+      data-cy="news-link">
       {{ news.title }}
     </router-link>
     <p>

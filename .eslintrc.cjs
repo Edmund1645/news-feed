@@ -25,5 +25,6 @@ module.exports = {
   },
   env: {
     "cypress/globals": true,
+    node: true,
   },
 };

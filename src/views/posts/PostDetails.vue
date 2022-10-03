@@ -1,11 +1,14 @@
 <template>
   <main>
-    <h1 class="text-center">{{ newsItem.title }}</h1>
-    <p class="text-center">
+    <h1 class="text-center" data-cy="post-title">{{ newsItem.title }}</h1>
+    <p class="text-center" data-cy="post-author">
       By: <strong>{{ newsItem.author }}</strong>
     </p>
 
-    <router-link :to="`/post/${newsItem.id}/edit`" class="text-center d-block">
+    <router-link
+      :to="`/post/${newsItem.id}/edit`"
+      class="text-center d-block"
+      data-cy="edit-post">
       edit
     </router-link>
 

@@ -1,23 +1,30 @@
 <template>
   <main>
-    <form @submit.prevent>
+    <form @submit.prevent data-cy="news-form">
       <p-form-field
         id="title"
         type="text"
         label="Title"
-        v-model:value="news.title" />
+        v-model:value="news.title"
+        data-cy="news-title" />
 
       <p-form-field
         id="author"
         type="text"
         label="Author"
-        v-model:value="news.author" />
+        v-model:value="news.author"
+        data-cy="news-author" />
 
       <p-label label-for="body">Body</p-label>
-      <p-text-area id="body" v-model:value="news.body"></p-text-area>
+      <p-text-area
+        id="body"
+        v-model:value="news.body"
+        data-cy="news-body"></p-text-area>
 
       <div class="d-grid mt-5">
-        <p-button @click="handleSubmit">Submit post</p-button>
+        <p-button @click="handleSubmit" data-cy="submit-post"
+          >Submit post</p-button
+        >
       </div>
     </form>
   </main>
